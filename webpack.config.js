@@ -43,6 +43,17 @@ module.exports = {
           'css-loader'
         ]
       },
+      {
+        test: /\.(png|jpg|gif|gltf|bin|obj|mtl)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            },
+          },
+        ]
+      },
     ]
   },
   devtool: 'source-map',
